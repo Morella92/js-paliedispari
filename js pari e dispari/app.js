@@ -6,46 +6,51 @@ console.log(userNumber)
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione)
 let pcNumber
-
-function randomNumber(pcNumber){
-
-    return Math.floor(Math.random()* 5) + 1
-
-}
-
-pcNumber = randomNumber(pcNumber)
+pcNumber = randomNumber()
 console.log(pcNumber)
 
 // Sommiamo i due numeri
 let sum = userNumber + pcNumber
 console.log(sum)
 
+// Comunichiamo all’utente chi ha vinto
+
+if(isEven(sum)){
+
+    console.log('Complimenti!Hai vinto!')
+
+}else if(isOdd(sum)){
+
+    console.log('Hai perso. Riprova!')
+
+}
+
+
+// ***** FUNZIONI ****//
+
+// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione)
+function randomNumber(){
+
+    return Math.floor(Math.random()* 5) + 1
+
+}
+
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-let numero
 
-function isEven (numero){
+function isEven (number){
 
-    if(numero % 2 === 0){
+    if(number % 2 === 0){
         return true     
     }else{
         return false
     }
 }
 
-function isOdd (numero){
+function isOdd (number){
 
-    if(numero % 2 !== 0){
+    if(number % 2 !== 0){
         return true
     }else{
         return false
     }
 }
-
-// Comunichiamo all’utente chi ha vinto
-
-if(isEven(sum)){
-    console.log('Complimenti!Hai vinto!')
-}else if(isOdd(sum)){
-    console.log('Hai perso. Riprova!')
-}
-

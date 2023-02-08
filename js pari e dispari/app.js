@@ -17,12 +17,14 @@ console.log(sum)
 
 if(isEven(sum)){
 
-    console.log('Complimenti!Hai vinto!')
+    printResult('Complimenti!Hai vinto!')
+
+    // console.log('Complimenti!Hai vinto!')
 
 }else if(isOdd(sum)){
 
-    console.log('Hai perso. Riprova!')
-
+    printResult('Hai perso. Riprova!')
+    // console.log('Hai perso. Riprova!')
 }
 
 
@@ -53,4 +55,10 @@ function isOdd (number){
     }else{
         return false
     }
+}
+
+function printResult(result){
+
+    document.getElementById('even-odd').innerHTML += result
+
 }

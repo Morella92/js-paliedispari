@@ -4,6 +4,17 @@ console.log('Parola palindroma')
 let userWord = prompt('Inserisci una parola')
 console.log(userWord)
 
+// Comunicare all’utente se la parola che ha inserito è palindroma oppure no
+
+if(palindromeWord(userWord)){
+
+    printResult('La parola '+ userWord + ' è palindroma')
+    // console.log('La parola è palindroma')
+}else{
+    
+    printResult('La parola '+ userWord + ' non è palindroma')
+}
+
 // Creare una funzione per capire se la parola inserita è palindroma
 function palindromeWord (isPalindrome){
 
@@ -13,10 +24,8 @@ function palindromeWord (isPalindrome){
     return isPalindrome === reverseWord
 }
 
-// Comunicare all’utente se la parola che ha inserito è palindroma oppure no
+function printResult(result){
 
-if(palindromeWord(userWord)){
-    console.log('La parola è palindroma')
-}else{
-    console.log('La parola non è palindroma')
+    document.getElementById('palindrome-word').innerHTML += result
+
 }

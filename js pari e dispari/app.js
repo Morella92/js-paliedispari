@@ -1,4 +1,12 @@
 console.log('Pari e dispari')
+// BISOGNAVA FARE IL CONTROLLO PER NON FAR INSERIRE UN NUMERO > 5!!!!
+
+// let numero
+// do{
+//      numero= parseInt(prompt('Inserisci un numero da 1 a 5.'))
+//}while (isNaN(numero) || numero > 5 || numero < 1) finchè il numero è != da NaN, >5 o < 1 continua a chiedere il numero
+
+
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5
 let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5.'))
